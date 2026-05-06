@@ -1,15 +1,12 @@
 
-E2Eテスト & 学習・検証用リポジトリ
+# e2eテストについて
 
-# e2eテスト
----
 
 ## 何をテストすべきか
 
 - ユーザーが実際に操作するフローが、システム全体に対して問題なく動くこと
 - ユーザーが実際に操作する標準フロー、エラーや失敗などの異常系
 
----
 
 ## Unitと結合テストとはどう分けるべきか
 
@@ -17,7 +14,7 @@ E2Eテスト & 学習・検証用リポジトリ
 - **結合テスト**：ユニット間の連携が正しく機能するか、データ連携が正しいかを検証する
 - **E2Eテスト**：システム全体の処理が正しいかを **ユーザー視点** で検証する
 
----
+
 
 ## 良いE2Eテストとは何か
 
@@ -46,8 +43,8 @@ E2Eテスト & 学習・検証用リポジトリ
 - Unit、結合と使い分けられていること
 
 
-# playwright 基礎
----
+# playwright 基礎について
+
 
 ## ① Navigation（ページ遷移）
 
@@ -61,7 +58,7 @@ await page.goForward();                      // 履歴を1つ進む
 await page.reload();                         // 現在のページを再読み込み
 ```
 
----
+
 
 ## ② Locator（要素の取得）
 
@@ -77,7 +74,7 @@ page.getByTestId('submit-btn');                  // data-testid属性で取得
 page.locator('.btn-primary');                    // CSS/XPathセレクタで取得（汎用）
 ```
 
----
+
 
 ## ③ Actions（要素への操作）
 
@@ -95,7 +92,7 @@ await page.getByLabel('国').selectOption('Japan');             // <select>か�
 await page.getByRole('link', { name: 'メニュー' }).hover();    // ホバー
 ```
 
----
+
 
 ## ④ Assertions（アサーション=検証）
 
@@ -113,7 +110,7 @@ await expect(page.getByRole('listitem')).toHaveCount(3);               // 要素
 await expect(page.getByRole('heading')).toHaveText('ようこそ');         // テキスト一致を検証
 ```
 
----
+
 
 ## ⑤ Get Value（値の取得）
 
