@@ -1,3 +1,4 @@
+// Homeページ異常系
 import { test, expect } from '@playwright/test';
 
 test.describe('H-2: バリデーションエラー表示確認', () => {

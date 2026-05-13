@@ -1,3 +1,4 @@
+// Homeページ正常系
 import { test, expect } from '@playwright/test';
 
 test.describe('H-1: フォーム正常送信フロー', () => {
